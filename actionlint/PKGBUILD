@@ -29,8 +29,9 @@ build() {
 
 check() {
   cd "$pkgname-$pkgver"
-  git clone --depth=1 --single-branch https://github.com/rhysd/actionlint.git
-  cd ./actionlint
+  # git clone --depth=1 --single-branch https://github.com/rhysd/actionlint.git
+  # cd ./actionlint
+  mkdir -p .git
   go test -v ./ ./scripts/...
 }
 
